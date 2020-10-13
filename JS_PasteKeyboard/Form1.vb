@@ -21,15 +21,14 @@
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.Text &= " V" & Application.ProductVersion
 
-
         Dim revisiondate As Integer = (Application.ProductVersion.Split(".")(2))
 
-        Dim expr As Integer = 20
+        Dim expr As Integer = 300
         If Now > DateSerial(2000, 1, revisiondate + expr) Then
             MsgBox("This version has expired. Please get the Latest version")
             End
         Else
-            'MsgBox("This Build expires: " & DateSerial(2000, 1, revisiondate + 90))
+            'MsgBox("This Build expires: " & DateSerial(2000, 1, revisiondate + expr))
             TextBox2.Text = TextBox2.Text & " This Build expires: " & DateSerial(2000, 1, revisiondate + expr)
         End If
     End Sub
