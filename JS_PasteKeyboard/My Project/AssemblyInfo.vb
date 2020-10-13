@@ -9,10 +9,10 @@ Imports System.Runtime.InteropServices
 ' Review the values of the assembly attributes
 
 <Assembly: AssemblyTitle("JS_PasteKeyboard")>
-<Assembly: AssemblyDescription("")>
-<Assembly: AssemblyCompany("JS")>
+<Assembly: AssemblyDescription("https://github.com/jselinger/JS_PasteKeyboard")>
+<Assembly: AssemblyCompany("JSLEINGER")>
 <Assembly: AssemblyProduct("JS_PasteKeyboard")>
-<Assembly: AssemblyCopyright("Copyright ©  2020")>
+<Assembly: AssemblyCopyright("Copyright ©  2020 JSELINGER")>
 <Assembly: AssemblyTrademark("")>
 
 <Assembly: ComVisible(False)>
@@ -31,5 +31,5 @@ Imports System.Runtime.InteropServices
 ' by using the '*' as shown below:
 ' <Assembly: AssemblyVersion("1.0.*")>
 
-<Assembly: AssemblyVersion("1.0.*")>
- '<Assembly: AssemblyFileVersion("1.0.*")>
+<Assembly: AssemblyVersion("1.1.*")>
+'<Assembly: AssemblyFileVersion("1.0.*")>

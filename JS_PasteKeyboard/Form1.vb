@@ -20,6 +20,7 @@
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.Text &= " V" & Application.ProductVersion
+        Title1 = Me.Text 'Store fore later
 
         Dim revisiondate As Integer = (Application.ProductVersion.Split(".")(2))
 
@@ -37,12 +38,15 @@
         If counter1 = 0 Then
             CountdownTimer1.Enabled = False
             Sendkey(TextBox1.Text)
+            Me.Text = Title1
         Else
             counter1 -= 1
+            Me.Text = counter1.ToString
         End If
         timedisplay.Text = counter1.ToString
 
     End Sub
+
 
     Private Sub Buttonmask_Click(sender As Object, e As EventArgs) Handles Buttonmask.Click
         If Buttonmask.Text = "Masked" Then

@@ -44,6 +44,7 @@ Partial Class Form1
         Me.Button1.Size = New System.Drawing.Size(148, 50)
         Me.Button1.TabIndex = 0
         Me.Button1.Text = "Start Countdown"
+        Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Button1.UseVisualStyleBackColor = True
         '
         'TextBox1
@@ -80,18 +81,18 @@ Partial Class Form1
         '
         'Delaycounterstart
         '
-        Me.Delaycounterstart.Location = New System.Drawing.Point(340, 12)
+        Me.Delaycounterstart.Location = New System.Drawing.Point(258, 12)
         Me.Delaycounterstart.Maximum = New Decimal(New Integer() {20, 0, 0, 0})
         Me.Delaycounterstart.Minimum = New Decimal(New Integer() {2, 0, 0, 0})
         Me.Delaycounterstart.Name = "Delaycounterstart"
         Me.Delaycounterstart.Size = New System.Drawing.Size(62, 20)
         Me.Delaycounterstart.TabIndex = 4
-        Me.Delaycounterstart.Value = New Decimal(New Integer() {5, 0, 0, 0})
+        Me.Delaycounterstart.Value = New Decimal(New Integer() {3, 0, 0, 0})
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(245, 19)
+        Me.Label2.Location = New System.Drawing.Point(159, 19)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(89, 13)
         Me.Label2.TabIndex = 5
@@ -120,11 +121,12 @@ Partial Class Form1
         '
         'Buttonmask
         '
-        Me.Buttonmask.Location = New System.Drawing.Point(258, 93)
+        Me.Buttonmask.Location = New System.Drawing.Point(258, 104)
         Me.Buttonmask.Name = "Buttonmask"
-        Me.Buttonmask.Size = New System.Drawing.Size(143, 41)
+        Me.Buttonmask.Size = New System.Drawing.Size(143, 30)
         Me.Buttonmask.TabIndex = 8
         Me.Buttonmask.Text = "Masked"
+        Me.Buttonmask.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Buttonmask.UseVisualStyleBackColor = True
         '
         'Form1
@@ -143,8 +145,8 @@ Partial Class Form1
         Me.Controls.Add(Me.Button1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
-        Me.MaximumSize = New System.Drawing.Size(472, 286)
-        Me.MinimumSize = New System.Drawing.Size(340, 194)
+        Me.MaximumSize = New System.Drawing.Size(421, 262)
+        Me.MinimumSize = New System.Drawing.Size(292, 94)
         Me.Name = "Form1"
         Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
         Me.Text = "(JS) Paste > Keyboard"
