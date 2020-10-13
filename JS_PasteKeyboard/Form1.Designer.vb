@@ -33,12 +33,13 @@ Partial Class Form1
         Me.Label2 = New System.Windows.Forms.Label()
         Me.timedisplay = New System.Windows.Forms.Label()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.Buttonmask = New System.Windows.Forms.Button()
         CType(Me.Delaycounterstart, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(286, 52)
+        Me.Button1.Location = New System.Drawing.Point(254, 38)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(148, 50)
         Me.Button1.TabIndex = 0
@@ -47,16 +48,17 @@ Partial Class Form1
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(35, 52)
+        Me.TextBox1.Location = New System.Drawing.Point(3, 38)
         Me.TextBox1.Multiline = True
         Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.TextBox1.Size = New System.Drawing.Size(245, 97)
         Me.TextBox1.TabIndex = 1
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(32, 36)
+        Me.Label1.Location = New System.Drawing.Point(0, 22)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(31, 13)
         Me.Label1.TabIndex = 2
@@ -64,12 +66,13 @@ Partial Class Form1
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(339, 108)
+        Me.Button2.Location = New System.Drawing.Point(377, 152)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(64, 41)
         Me.Button2.TabIndex = 3
         Me.Button2.Text = "notepad Test"
         Me.Button2.UseVisualStyleBackColor = True
+        Me.Button2.Visible = False
         '
         'CountdownTimer1
         '
@@ -77,7 +80,7 @@ Partial Class Form1
         '
         'Delaycounterstart
         '
-        Me.Delaycounterstart.Location = New System.Drawing.Point(372, 26)
+        Me.Delaycounterstart.Location = New System.Drawing.Point(340, 12)
         Me.Delaycounterstart.Maximum = New Decimal(New Integer() {20, 0, 0, 0})
         Me.Delaycounterstart.Minimum = New Decimal(New Integer() {2, 0, 0, 0})
         Me.Delaycounterstart.Name = "Delaycounterstart"
@@ -88,7 +91,7 @@ Partial Class Form1
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(277, 33)
+        Me.Label2.Location = New System.Drawing.Point(245, 19)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(89, 13)
         Me.Label2.TabIndex = 5
@@ -98,7 +101,7 @@ Partial Class Form1
         '
         Me.timedisplay.AutoSize = True
         Me.timedisplay.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.timedisplay.Location = New System.Drawing.Point(148, 10)
+        Me.timedisplay.Location = New System.Drawing.Point(54, 3)
         Me.timedisplay.Name = "timedisplay"
         Me.timedisplay.Size = New System.Drawing.Size(31, 33)
         Me.timedisplay.TabIndex = 6
@@ -107,7 +110,7 @@ Partial Class Form1
         'TextBox2
         '
         Me.TextBox2.Enabled = False
-        Me.TextBox2.Location = New System.Drawing.Point(35, 166)
+        Me.TextBox2.Location = New System.Drawing.Point(3, 141)
         Me.TextBox2.Multiline = True
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(368, 76)
@@ -115,11 +118,21 @@ Partial Class Form1
         Me.TextBox2.Text = "(1) Paste Text into Box Above" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "(2) Set seconds to Wait" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "(3) Press Start" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "(4) Swit" &
     "ch curser to window and place where you want the password pasted"
         '
+        'Buttonmask
+        '
+        Me.Buttonmask.Location = New System.Drawing.Point(258, 93)
+        Me.Buttonmask.Name = "Buttonmask"
+        Me.Buttonmask.Size = New System.Drawing.Size(143, 41)
+        Me.Buttonmask.TabIndex = 8
+        Me.Buttonmask.Text = "Masked"
+        Me.Buttonmask.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(456, 247)
+        Me.ClientSize = New System.Drawing.Size(405, 223)
+        Me.Controls.Add(Me.Buttonmask)
         Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.timedisplay)
         Me.Controls.Add(Me.Label2)
@@ -150,4 +163,5 @@ Partial Class Form1
     Friend WithEvents Label2 As Label
     Friend WithEvents timedisplay As Label
     Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents Buttonmask As Button
 End Class

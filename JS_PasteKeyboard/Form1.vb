@@ -44,5 +44,13 @@
 
     End Sub
 
-
+    Private Sub Buttonmask_Click(sender As Object, e As EventArgs) Handles Buttonmask.Click
+        If Buttonmask.Text = "Masked" Then
+            Buttonmask.Text = "UN-Masked"
+            TextBox1.PasswordChar = ""
+        Else
+            Buttonmask.Text = "Masked"
+            TextBox1.PasswordChar = "*"
+        End If
+    End Sub
 End Class
