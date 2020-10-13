@@ -34,6 +34,8 @@ Partial Class Form1
         Me.timedisplay = New System.Windows.Forms.Label()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.Buttonmask = New System.Windows.Forms.Button()
+        Me.timeleftbar = New System.Windows.Forms.ProgressBar()
+        Me.ClearTimer = New System.Windows.Forms.Timer(Me.components)
         CType(Me.Delaycounterstart, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -41,7 +43,7 @@ Partial Class Form1
         '
         Me.Button1.Location = New System.Drawing.Point(254, 38)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(148, 50)
+        Me.Button1.Size = New System.Drawing.Size(117, 50)
         Me.Button1.TabIndex = 0
         Me.Button1.Text = "Start Countdown"
         Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -123,17 +125,32 @@ Partial Class Form1
         '
         Me.Buttonmask.Location = New System.Drawing.Point(258, 104)
         Me.Buttonmask.Name = "Buttonmask"
-        Me.Buttonmask.Size = New System.Drawing.Size(143, 30)
+        Me.Buttonmask.Size = New System.Drawing.Size(113, 30)
         Me.Buttonmask.TabIndex = 8
         Me.Buttonmask.Text = "Masked"
         Me.Buttonmask.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Buttonmask.UseVisualStyleBackColor = True
         '
+        'timeleftbar
+        '
+        Me.timeleftbar.Location = New System.Drawing.Point(3, 214)
+        Me.timeleftbar.Maximum = 3600
+        Me.timeleftbar.Name = "timeleftbar"
+        Me.timeleftbar.Size = New System.Drawing.Size(368, 23)
+        Me.timeleftbar.TabIndex = 9
+        Me.timeleftbar.UseWaitCursor = True
+        Me.timeleftbar.Value = 3600
+        '
+        'ClearTimer
+        '
+        Me.ClearTimer.Interval = 1000
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(405, 223)
+        Me.ClientSize = New System.Drawing.Size(376, 223)
+        Me.Controls.Add(Me.timeleftbar)
         Me.Controls.Add(Me.Buttonmask)
         Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.timedisplay)
@@ -145,7 +162,7 @@ Partial Class Form1
         Me.Controls.Add(Me.Button1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
-        Me.MaximumSize = New System.Drawing.Size(421, 262)
+        Me.MaximumSize = New System.Drawing.Size(392, 262)
         Me.MinimumSize = New System.Drawing.Size(292, 94)
         Me.Name = "Form1"
         Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
@@ -166,4 +183,6 @@ Partial Class Form1
     Friend WithEvents timedisplay As Label
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents Buttonmask As Button
+    Friend WithEvents timeleftbar As ProgressBar
+    Friend WithEvents ClearTimer As Timer
 End Class

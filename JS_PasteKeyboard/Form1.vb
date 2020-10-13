@@ -57,4 +57,23 @@
             TextBox1.PasswordChar = "*"
         End If
     End Sub
+
+    Private Sub ClearTimer_Tick(sender As Object, e As EventArgs) Handles ClearTimer.Tick
+        If timeleftbar.Value < 2 Then
+            ClearTimer.Enabled = False
+            TextBox1.Text = ""
+        Else
+            timeleftbar.Value -= 1
+        End If
+    End Sub
+
+    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
+        timeleftbar.Value = 3600
+        If TextBox1.TextLength > 0 Then
+            ClearTimer.Enabled = True
+        Else
+            ClearTimer.Enabled = False
+        End If
+
+    End Sub
 End Class
