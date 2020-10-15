@@ -70,13 +70,13 @@
     <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
   </PropertyGroup>
   <PropertyGroup>
-    <SignManifests>true</SignManifests>
+    <SignManifests>false</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>AD40EF4DEF163D08DF19C470CBEAF86F65EF2C60</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>87615936D0EB710D7C7F99E52443DCA9362951DB</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
-    <SignAssembly>true</SignAssembly>
+    <SignAssembly>false</SignAssembly>
   </PropertyGroup>
   <PropertyGroup>
     <ManifestKeyFile>JS_PasteKeyboard_TemporaryKey.pfx</ManifestKeyFile>
