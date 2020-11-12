@@ -1,11 +1,12 @@
 ﻿Public Class Form1
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        counter1 = Delaycounterstart.Value
-        CountdownTimer1.Enabled = True
+        timeleftbar.Value = 3600 'Reset auto wipe if used
+        counter1 = Delaycounterstart.Value 'Set countdown varable for timmer
+        CountdownTimer1.Enabled = True 'start the timer that sends the key
 
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click  'disabled sample code
         Dim ProcID As Integer
         ' Start the Notepad application, and store the process id.
         ProcID = Shell("NOTEPAD.EXE", AppWinStyle.NormalFocus)

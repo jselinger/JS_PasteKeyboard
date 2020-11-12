@@ -41,13 +41,14 @@ Partial Class Form1
         '
         'Button1
         '
+        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.Button1.Location = New System.Drawing.Point(254, 38)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(117, 50)
         Me.Button1.TabIndex = 0
         Me.Button1.Text = "Start Countdown"
         Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.Button1.UseVisualStyleBackColor = False
         '
         'TextBox1
         '
@@ -123,13 +124,14 @@ Partial Class Form1
         '
         'Buttonmask
         '
+        Me.Buttonmask.BackColor = System.Drawing.Color.Tomato
         Me.Buttonmask.Location = New System.Drawing.Point(258, 104)
         Me.Buttonmask.Name = "Buttonmask"
         Me.Buttonmask.Size = New System.Drawing.Size(113, 30)
         Me.Buttonmask.TabIndex = 8
         Me.Buttonmask.Text = "Masked"
         Me.Buttonmask.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Buttonmask.UseVisualStyleBackColor = True
+        Me.Buttonmask.UseVisualStyleBackColor = False
         '
         'timeleftbar
         '
