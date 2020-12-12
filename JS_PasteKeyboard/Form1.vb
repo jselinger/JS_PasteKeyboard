@@ -38,7 +38,7 @@
     Private Sub CountdownTimer1_Tick(sender As Object, e As EventArgs) Handles CountdownTimer1.Tick
         If counter1 = 0 Then
             CountdownTimer1.Enabled = False
-            Sendkey(TextBox1.Text)
+            Sendkey(TextBox_Input.Text)
             Me.Text = Title1
         Else
             counter1 -= 1
@@ -51,30 +51,45 @@
 
     Private Sub Buttonmask_Click(sender As Object, e As EventArgs) Handles Buttonmask.Click
         If Buttonmask.Text = "Masked" Then
+            RemaskCounter = 30
             Buttonmask.Text = "UN-Masked"
-            TextBox1.PasswordChar = ""
+            TextBox_Input.PasswordChar = ""
+            remaskTimer.Enabled = True
         Else
             Buttonmask.Text = "Masked"
-            TextBox1.PasswordChar = "*"
+            TextBox_Input.PasswordChar = "*"
+            remaskTimer.Enabled = False
         End If
     End Sub
 
     Private Sub ClearTimer_Tick(sender As Object, e As EventArgs) Handles ClearTimer.Tick
         If timeleftbar.Value < 2 Then
             ClearTimer.Enabled = False
-            TextBox1.Text = ""
+            TextBox_Input.Text = ""
         Else
             timeleftbar.Value -= 1
         End If
     End Sub
 
-    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
+    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox_Input.TextChanged
         timeleftbar.Value = 3600
-        If TextBox1.TextLength > 0 Then
+        If TextBox_Input.TextLength > 0 Then
             ClearTimer.Enabled = True
         Else
             ClearTimer.Enabled = False
         End If
 
+    End Sub
+
+    Private Sub remaskTimer_Tick(sender As Object, e As EventArgs) Handles remaskTimer.Tick
+        Buttonmask.Text = "UN-Masked " & RemaskCounter
+        RemaskCounter -= 1
+        If RemaskCounter < 1 Then
+            Buttonmask_Click(sender, e)
+        End If
+    End Sub
+
+    Private Sub BClearSpace_Click(sender As Object, e As EventArgs) Handles BClearSpace.Click
+        TextBox_Input.Text = TextBox_Input.Text.Trim
     End Sub
 End Class

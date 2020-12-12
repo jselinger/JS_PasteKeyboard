@@ -25,7 +25,7 @@ Partial Class Form1
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.TextBox_Input = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.CountdownTimer1 = New System.Windows.Forms.Timer(Me.components)
@@ -36,6 +36,8 @@ Partial Class Form1
         Me.Buttonmask = New System.Windows.Forms.Button()
         Me.timeleftbar = New System.Windows.Forms.ProgressBar()
         Me.ClearTimer = New System.Windows.Forms.Timer(Me.components)
+        Me.remaskTimer = New System.Windows.Forms.Timer(Me.components)
+        Me.BClearSpace = New System.Windows.Forms.Button()
         CType(Me.Delaycounterstart, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -44,20 +46,20 @@ Partial Class Form1
         Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.Button1.Location = New System.Drawing.Point(254, 38)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(117, 50)
+        Me.Button1.Size = New System.Drawing.Size(113, 50)
         Me.Button1.TabIndex = 0
         Me.Button1.Text = "Start Countdown"
         Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Button1.UseVisualStyleBackColor = False
         '
-        'TextBox1
+        'TextBox_Input
         '
-        Me.TextBox1.Location = New System.Drawing.Point(3, 38)
-        Me.TextBox1.Multiline = True
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.TextBox1.Size = New System.Drawing.Size(245, 97)
-        Me.TextBox1.TabIndex = 1
+        Me.TextBox_Input.Location = New System.Drawing.Point(3, 38)
+        Me.TextBox_Input.Multiline = True
+        Me.TextBox_Input.Name = "TextBox_Input"
+        Me.TextBox_Input.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.TextBox_Input.Size = New System.Drawing.Size(245, 97)
+        Me.TextBox_Input.TabIndex = 1
         '
         'Label1
         '
@@ -90,7 +92,7 @@ Partial Class Form1
         Me.Delaycounterstart.Name = "Delaycounterstart"
         Me.Delaycounterstart.Size = New System.Drawing.Size(62, 20)
         Me.Delaycounterstart.TabIndex = 4
-        Me.Delaycounterstart.Value = New Decimal(New Integer() {3, 0, 0, 0})
+        Me.Delaycounterstart.Value = New Decimal(New Integer() {2, 0, 0, 0})
         '
         'Label2
         '
@@ -125,9 +127,9 @@ Partial Class Form1
         'Buttonmask
         '
         Me.Buttonmask.BackColor = System.Drawing.Color.Tomato
-        Me.Buttonmask.Location = New System.Drawing.Point(258, 104)
+        Me.Buttonmask.Location = New System.Drawing.Point(254, 110)
         Me.Buttonmask.Name = "Buttonmask"
-        Me.Buttonmask.Size = New System.Drawing.Size(113, 30)
+        Me.Buttonmask.Size = New System.Drawing.Size(113, 25)
         Me.Buttonmask.TabIndex = 8
         Me.Buttonmask.Text = "Masked"
         Me.Buttonmask.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -147,11 +149,27 @@ Partial Class Form1
         '
         Me.ClearTimer.Interval = 1000
         '
+        'remaskTimer
+        '
+        Me.remaskTimer.Interval = 1000
+        '
+        'BClearSpace
+        '
+        Me.BClearSpace.BackColor = System.Drawing.Color.Khaki
+        Me.BClearSpace.Location = New System.Drawing.Point(254, 86)
+        Me.BClearSpace.Name = "BClearSpace"
+        Me.BClearSpace.Size = New System.Drawing.Size(113, 25)
+        Me.BClearSpace.TabIndex = 10
+        Me.BClearSpace.Text = "Clear Space"
+        Me.BClearSpace.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BClearSpace.UseVisualStyleBackColor = False
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(376, 223)
+        Me.Controls.Add(Me.BClearSpace)
         Me.Controls.Add(Me.timeleftbar)
         Me.Controls.Add(Me.Buttonmask)
         Me.Controls.Add(Me.TextBox2)
@@ -160,7 +178,7 @@ Partial Class Form1
         Me.Controls.Add(Me.Delaycounterstart)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.TextBox_Input)
         Me.Controls.Add(Me.Button1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
@@ -176,7 +194,7 @@ Partial Class Form1
     End Sub
 
     Friend WithEvents Button1 As Button
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents TextBox_Input As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Button2 As Button
     Friend WithEvents CountdownTimer1 As Timer
@@ -187,4 +205,6 @@ Partial Class Form1
     Friend WithEvents Buttonmask As Button
     Friend WithEvents timeleftbar As ProgressBar
     Friend WithEvents ClearTimer As Timer
+    Friend WithEvents remaskTimer As Timer
+    Friend WithEvents BClearSpace As Button
 End Class
