@@ -1,8 +1,10 @@
 ﻿Public Class Form1
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        timeleftbar.Value = 3600 'Reset auto wipe if used
+        timeleftbar.Value = 14400 '3600 'Reset auto wipe if used
         counter1 = Delaycounterstart.Value 'Set countdown varable for timmer
         CountdownTimer1.Enabled = True 'start the timer that sends the key
+
+        Form1.ActiveForm.Height = 180
 
     End Sub
 
@@ -25,7 +27,7 @@
 
         Dim revisiondate As Integer = (Application.ProductVersion.Split(".")(2))
 
-        Dim expr As Integer = 300
+        Dim expr As Integer = 330
         If Now > DateSerial(2000, 1, revisiondate + expr) Then
             MsgBox("This version has expired. Please get the Latest version")
             End
@@ -50,6 +52,7 @@
 
 
     Private Sub Buttonmask_Click(sender As Object, e As EventArgs) Handles Buttonmask.Click
+        timeleftbar.Value = 14400 'Reset auto wipe if used
         If Buttonmask.Text = "Masked" Then
             RemaskCounter = 30
             Buttonmask.Text = "UN-Masked"
@@ -72,7 +75,7 @@
     End Sub
 
     Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox_Input.TextChanged
-        timeleftbar.Value = 3600
+        timeleftbar.Value = 14400
         If TextBox_Input.TextLength > 0 Then
             ClearTimer.Enabled = True
         Else

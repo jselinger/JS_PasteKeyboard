@@ -137,13 +137,14 @@ Partial Class Form1
         '
         'timeleftbar
         '
-        Me.timeleftbar.Location = New System.Drawing.Point(3, 214)
-        Me.timeleftbar.Maximum = 3600
+        Me.timeleftbar.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.timeleftbar.Location = New System.Drawing.Point(0, 213)
+        Me.timeleftbar.Maximum = 14400
         Me.timeleftbar.Name = "timeleftbar"
-        Me.timeleftbar.Size = New System.Drawing.Size(368, 23)
+        Me.timeleftbar.Size = New System.Drawing.Size(376, 10)
         Me.timeleftbar.TabIndex = 9
         Me.timeleftbar.UseWaitCursor = True
-        Me.timeleftbar.Value = 3600
+        Me.timeleftbar.Value = 14400
         '
         'ClearTimer
         '
