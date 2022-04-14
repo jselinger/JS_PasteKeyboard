@@ -27,14 +27,14 @@
 
         Dim revisiondate As Integer = (Application.ProductVersion.Split(".")(2))
 
-        Dim expr As Integer = 330
-        If Now > DateSerial(2000, 1, revisiondate + expr) Then
-            MsgBox("This version has expired. Please get the Latest version")
-            End
-        Else
-            'MsgBox("This Build expires: " & DateSerial(2000, 1, revisiondate + expr))
-            TextBox2.Text = TextBox2.Text & " This Build expires: " & DateSerial(2000, 1, revisiondate + expr)
-        End If
+        'Dim expr As Integer = 330
+        'If Now > DateSerial(2000, 1, revisiondate + expr) Then
+        'MsgBox("This version has expired. Please get the Latest version")
+        'End
+        'Else
+        ''MsgBox("This Build expires: " & DateSerial(2000, 1, revisiondate + expr))
+        'TextBox2.Text = TextBox2.Text & " This Build expires: " & DateSerial(2000, 1, revisiondate + expr)
+        'End If
     End Sub
 
     Private Sub CountdownTimer1_Tick(sender As Object, e As EventArgs) Handles CountdownTimer1.Tick

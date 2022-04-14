@@ -12,7 +12,7 @@ Imports System.Runtime.InteropServices
 <Assembly: AssemblyDescription("https://github.com/jselinger/JS_PasteKeyboard")>
 <Assembly: AssemblyCompany("JSLEINGER")>
 <Assembly: AssemblyProduct("github.com/jselinger/JS_PasteKeyboard")>
-<Assembly: AssemblyCopyright("Copyright ©  2020 JSELINGER")>
+<Assembly: AssemblyCopyright("Copyright ©  2022 JSELINGER")>
 <Assembly: AssemblyTrademark("")>
 
 <Assembly: ComVisible(False)>
